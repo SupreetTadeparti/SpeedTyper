@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            height: 95vh;
+            font-family: "Helvetica";
+        }
+        h1 {
+            text-align: center;
+            width: 30%;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 10px;
+            height: 5vh;
+            width: 20vw;
+            transition: background-color 0.5s;
+        } button:hover {
+            background-color: rgb(12, 95, 179);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <h1>The Page You Are Looking For Is Not Found.</h1>
+        <button onclick=" window.location.href = '/' ">Return To Homepage</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/typing.css' %}">
+<title>Timer Race!</title>
+{% endblock %}
+
+{% block body %}
+<div class="main-container">
+    <div class="timer"></div>
+    <div class="typing-container">
+        <div class="statistics-container">
+            {% if request.user.is_authenticated %}
+                <div class="statistics" id="tests-taken">
+                    Tests Taken : <span id="tests-span">{{ tests }}</span>
+                </div>
+                <div class="statistics" id="average">
+                    Average WPM : <span id="wpm-span">{{ user.typing.average_wpm }}</span>
+                </div>
+            {% endif %}
+        </div>
+        <div class="main-type-container">
+            <div class="text-container">
+                <div id="typing-text">{% for word in words %}<span class="word">{{word}} </span>{% endfor %}</div>
+            </div>
+            <form autocomplete="off">
+                {% csrf_token %}
+                <input placeholder="Start Typing!" type="text" id="typing-input">
+            </form>
+        </div>
+        <button id="new-btn">Generate New Test</button>
+        <button id="settings-btn">Settings</button>
+        <button id="modes-btn">Modes</button>
+        <div class="settings-panel panel">
+            Time (in seconds) : <select id="words-select">
+                <option value="15">15</option>
+                <option value="30" selected>30</option>
+                <option value="60">60</option>
+                <option value="180">180</option>
+                <option value="300">300</option>
+            </select>
+        </div>
+        <div class="modes-panel panel">
+            <a class="mode" href="/typing-test/paragraph">Paragraph Mode</a>
+            <a class="mode" href="/typing-test/timer">Timer Mode</a>
+        </div>
+    </div>
+    <div class="result-container">
+        <div class="result"></div>
+        <div class="raw"></div>
+        <div class="accuracy"></div>
+        <img src="" class="keyboard-image">
+        <div class="level"></div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+    let averageWPM = '{{user.typing.average_wpm}}'
+</script>
+<script type="text/javascript" src="{% static 'main/js/timer.js' %}"></script>
+{% for word in all_words %}
+    <script type="text/javascript">
+        words.push('{{word}}')
+    </script>
+{% endfor %}
+{% endblock %}

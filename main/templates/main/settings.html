@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/settings.css' %}">
+<title>User Settings</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="main-container">
+        <h2 id="average" style="color: white; text-shadow: 0 0 2px;">Average WPM : {{ user.typing.average_wpm }}</h2>
+        <h3 id="username">Username : {{ user.username }}</h3>
+        <h3 id="email">Email : {{ user.email }}</h3>
+        <h3 id="tests-taken">Tests Taken : {{ tests_taken }}</h3>
+        <button id="reset-btn">Reset Statistics</button>
+    </div
+</div>
+<script>
+    document.getElementById('reset-btn').addEventListener('click', function() {
+        let resetPrompt = confirm('Are you sure you want to reset your typing statistics?');
+        if (resetPrompt) {
+            window.location.href = '/reset';
+        }
+    })
+</script>
+{% endblock %}

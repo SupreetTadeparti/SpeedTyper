@@ -1,0 +1,183 @@
+.typing-container {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -70%);
+    min-width: 80vh;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
+
+#typing-text, #typing-input {
+    width: 100%;
+    border-radius: 10px;
+    padding:10px;
+}
+
+#typing-text {
+    font-size: 1.5rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#typing-input {
+    border: none;
+    outline: none;
+    height: 7vh;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 1px solid rgb(172, 172, 172);
+} #typing-input:focus {
+    border: 1px solid rgb(117, 117, 117);
+}
+
+button {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 1.25vh;
+}
+
+#new-btn {
+    background-color: rgba(255, 166, 0, 0.8);
+    width: 150px;
+}
+#settings-btn {
+    background-color: dodgerblue;
+    width: 100px;
+}
+#modes-btn {
+    background-color: rgb(38, 189, 38);
+    width: 100px;
+}
+
+.word {
+    border-radius: 5px;
+}
+
+.timer {
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-25%, -50%);
+
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 166, 0, 0.8);
+    color: white;
+
+    text-align: center;
+    line-height: 125px;
+
+    font-size: 1.9rem;
+
+    box-shadow: 5px 10px 13px -3pxpx rgba(0,0,0,0.55);
+    -webkit-box-shadow: 5px 10px 13px -3px rgba(0,0,0,0.55);
+    -moz-box-shadow: 5px 10px 13px -3px rgba(0,0,0,0.55);
+}
+
+.result-container {
+    display: none;
+
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 15%;
+    height: 40%;
+
+    background-color: rgba(255, 166, 0, 0.8);
+    color: white;
+
+    text-align: center;
+    border-radius: 5%;
+
+    box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.5);
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+.panel {
+    position: absolute;
+
+    width: 300px;
+    height: 50px;
+
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.panel.fade {
+    opacity: 1;
+    z-index: 100;
+}
+
+.settings-panel {
+    top: 100%;
+    left: 22.5%;
+    background: dodgerblue;
+}
+
+.modes-panel {
+    top: 100%;
+    left: 37.75%;
+    background: rgb(38, 189, 38);
+}
+
+.mode {
+    color: white;
+    width: 50px;
+    margin: 0 10px;
+} .mode:hover {
+    color: white;
+}
+
+.keyboard-image {
+    margin-top: 10px;
+    height: 6rem;
+    width: 6rem;
+}
+
+.level {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.text-container {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.main-type-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.statistics-container {
+    display: flex;
+    text-align: center;
+}
+
+.statistics {
+    width: 100%;
+}

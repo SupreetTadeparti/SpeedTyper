@@ -1,0 +1,97 @@
+body {background-color: rgb(252, 226, 203);}
+
+.form-container {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -80%);
+
+    width: 30vw;
+    height: auto;
+    max-height: 85vh;
+
+    background-color: rgba(255, 166, 0, 0.8);
+
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 5%;
+}
+
+#register-form > .login-form,
+#register-form > #sbmt-btn {
+    text-align: center;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    border: none;
+    outline: none;
+    width: 75%;
+    height: 7.5vh;
+    border-radius: 1.5vh;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2vh;
+}
+
+label {
+    margin-left: 14%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 800;
+    font-family: Roboto;
+    font-size: 2.5vh;
+}
+
+#sbmt-btn {
+    display: block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 75%;
+    height: 7vh;
+    border-radius: 1vh;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(232, 126, 4);
+    color: white;
+    font-size: 2.25vh;
+    transition: background-color 0.5s;
+}
+#sbmt-btn:hover {
+    background-color: rgb(179, 99, 8)
+}
+
+#login-link {
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    min-width: 75%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vh;
+} a:hover {
+    text-decoration: underline;
+}
+
+#register-heading {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.messages {
+    margin: auto;
+    width: 75%;
+    margin-bottom: 2%;
+    font-size: 2.5vh;
+}

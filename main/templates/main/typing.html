@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/typing_home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="main-container">
+    <div class="cards-container">
+        <div class="card">
+            <div class="image-container">
+                <img src="{% static 'main/img/paragraph.png' %}" height="100px">
+            </div>
+            <div class="card-content">
+                <div class="card-name">Paragraph Typing</div>
+                <div class="card-description">Calculates WPM on the basis of how fast you can type out a paragraph!</div>
+                <button class="btn" onclick="window.location.href='/typing-test/paragraph'">Begin Typing!</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-container">
+                <img src="{% static 'main/img/timer.png' %}" height="100px">
+            </div>
+            <div class="card-content">
+                <div class="card-name">Timer Typing</div>
+                <div class="card-description">Calculates WPM on the basis on how many words you can type in a customizable time!</div>
+                <button class="btn" onclick="window.location.href='/typing-test/timer'">Begin Typing!</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+</script>
+{% endblock %}

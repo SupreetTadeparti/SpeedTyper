@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/register.css' %}">
+<title>Register Page</title>
+{% endblock %}
+
+{% block body %}
+<div class="main-container">
+    <div class="form-container">
+        <h1 id="register-heading">Register</h1>
+        <form id="register-form" action="/register/" method="post">
+            {% csrf_token %}
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="message">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% for field in form %}
+                {{ field.label_tag }}<br>
+                <div class="login-input">{{ field }}</div>
+            {% endfor %}
+            <input type="submit" value="Register Account" id="sbmt-btn">
+        </form>
+        <span id="login-link"><a href="/login">Already have an account? Login here!</a></span>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'main/js/register.js' %}"></script>
+{% endblock %}

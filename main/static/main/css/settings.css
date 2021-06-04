@@ -1,0 +1,38 @@
+*, *::after, *::before { box-sizing: border-box; }
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25em;
+    border: 1px solid black;
+    border-radius: 1.25rem;
+    width: 40vw;
+    margin: auto;
+    padding: 20px 0;
+    background-color: rgb(248, 187, 72)
+}
+
+.main-container *:not(button) {
+    text-align: center;
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    background-color: red;
+    color: white;
+    width: 10rem;
+    padding: 2px 0;
+    margin: auto;
+}
